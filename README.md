@@ -82,5 +82,14 @@ I'm thankful to CodTech for assigning this task — it was a perfect opportunity
 
 # output :
 
+this is a video clip 
+
 https://github.com/user-attachments/assets/6eddbf9a-a66a-4a8a-8f4f-d6b942b52a46
+
+I am also providing the screenshot of the output
+
+![Image](https://github.com/user-attachments/assets/06e4f02a-5ee5-4b9e-8d08-b412d75113c1)
+
+
+
 
