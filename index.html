@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><button type="button" onclick="showSection('home')" class="nav-btn">Home</button></li>
+      <li><button type="button" onclick="showSection('about')" class="nav-btn">About</button></li>
+      <li><button type="button" onclick="showSection('projects')" class="nav-btn">Projects</button></li>
+      <li><button type="button" onclick="showSection('contact')" class="nav-btn">Contact</button></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home" class="active-section">
+      <div class="home-center">
+        <img src="cheradeep.jpg" alt="Cheradeep Profile" class="profile-img" />
+        <div class="home-details">
+          <h1>Hi, I'm Cheradeep</h1>
+          <p>Frontend Developer | Student | Tech Enthusiast</p>
+          <p>Welcome to my portfolio! I love creating beautiful and functional web applications.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="hidden-section">
+      <h2>About Me</h2>
+      <p>I’m a B.Tech student passionate about web development, especially with HTML, CSS, and JavaScript. I love turning ideas into real-world interfaces.</p>
+        <h3>Skills</h3>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+
+    </section>
+
+    <section id="projects" class="hidden-section">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Real-time Chat App</h3>
+        <p>Built using React and WebSockets. Enables live chat with message history.</p>
+        <a href="https://github.com/GANTACHERADEEP/real-time-chat-app" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Quiz App</h3>
+        <p>JavaScript quiz with real-time feedback and scoring system.</p>
+        <a href="https://github.com/GANTACHERADEEP/quiz-app" target="_blank">View on GitHub</a>
+      </div>
+    </section>
+
+    <section id="contact" class="hidden-section">
+      <h2>Contact</h2>
+      <p>Email: gantacheradeep@gmail.com</p>
+      <p>GitHub: <a href="https://github.com/GANTACHERADEEP" target="_blank">github.com/GANTACHERADEEP</a></p>
+    </section>
+  </main>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => {
+        sec.classList.add('hidden-section');
+        sec.classList.remove('active-section');
+      });
+      document.getElementById(sectionId).classList.remove('hidden-section');
+      document.getElementById(sectionId).classList.add('active-section');
+
+      if (sectionId === 'home') {
+        document.body.classList.remove('not-home');
+      } else {
+        document.body.classList.add('not-home');
+      }
+    }
+  </script>
+</body>
+</html>
